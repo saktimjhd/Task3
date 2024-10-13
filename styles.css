@@ -98,33 +98,39 @@ h2 {
   color: #4a4a4a;
 }
 
-table {
+.table {
   width: 100%;
+
   margin: 30px auto;
   border-collapse: collapse;
-  border-radius: 5px;
+
   border-spacing: 0;
+  display: flex;
   background-color: #fff;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-
-  word-wrap: break-word;
 }
 
-th,
-td {
-  flex-direction: row;
+h5 {
   border: 1px solid black;
-
-  max-width: 50px;
-  padding: 15px;
+  padding: 10px;
   text-align: center;
-  font-size: 16px;
+}
+
+.title {
+  background-color: #c0a080;
+  font-weight: 700;
+}
+
+.row {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  flex: auto;
 }
 
 th {
-  background-color: #c0a080;
   color: #fff;
-  font-weight: 700;
 }
 
 main {
@@ -159,7 +165,6 @@ main {
 }
 
 #keahlian {
-  background-color: #fff;
   padding: 50px 0;
 }
 
@@ -203,7 +208,7 @@ footer {
   margin-top: 50px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 880px) {
   #profil h2 {
     text-align: center;
     display: flex;
@@ -224,7 +229,7 @@ footer {
   }
 }
 
-@media (max-width: 480px) {
+@media (max-width: 600px) {
   h1 {
     font-size: 28px;
   }
@@ -233,13 +238,27 @@ footer {
     font-size: 24px;
   }
 
+  .table {
+    flex-direction: column;
+  }
+
   .imageprofile {
     width: 150px;
     height: 150px;
   }
 
+  main {
+    flex-direction: column;
+  }
+  #profil h2 {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+  }
+
   table {
     font-size: 14px;
+    max-width: 20px;
   }
 
   .skill {
